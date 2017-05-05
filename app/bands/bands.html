@@ -1,0 +1,6 @@
+<p>All Bands</p>
+<ul>
+	<li ng-repeat="band in $ctrl.bands | orderBy: 'name' "> 
+		<a href="#!/bands/{{band.id}}">{{band.name}}</a>
+	</li>
+</ul>

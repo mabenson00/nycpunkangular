@@ -1,0 +1,11 @@
+
+<p>All Concerts</p>
+<ul ng-repeat="(date, concerts) in $ctrl.concerts | orderBy: 'date' | groupBy: 'date' " class="concerts">
+	Date: {{ date }}
+	<li ng-repeat="concert in concerts">
+	
+		<span ng-repeat="band in concert.bands" >
+		{{band.name}}{{$last ? '' : ($index == concert.bands.length -2) ? ' and ' : ','}} 
+		</span> at {{concert.venue.name}}
+	</li>
+</ul>
