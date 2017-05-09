@@ -5,12 +5,17 @@ angular.module('myApp', [
   'ngRoute',
   'core',
   'angular.filter',
+  'ui.bootstrap.popup',
+  'ui.bootstrap',
+  'ngAnimate',
+  'ngSanitize',
   'myApp.concertList',
   'myApp.bandList',
   'myApp.version',
   'myApp.bandDetail',
   'myApp.venueList',
-  'myApp.venueDetail'
+  'myApp.venueDetail',
+  'myApp.controllers'
 
 ]).
 // config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

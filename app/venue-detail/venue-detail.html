@@ -1,4 +1,4 @@
-<h2> {{$ctrl.venue.name}} </h2>
+<h1 class="display-4"> {{$ctrl.venue.name}} </h1>
 <ul ng-repeat="(date, concerts) in $ctrl.venue.concerts | orderBy: 'date' | groupBy: 'date' " class="concerts">
 	Date: {{ date }}
 	<li ng-repeat="concert in concerts">
