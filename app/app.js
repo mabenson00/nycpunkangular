@@ -8,7 +8,9 @@ angular.module('myApp', [
   'myApp.concertList',
   'myApp.bandList',
   'myApp.version',
-  'myApp.bandDetail'
+  'myApp.bandDetail',
+  'myApp.venueList',
+  'myApp.venueDetail'
 
 ]).
 // config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
@@ -31,6 +33,12 @@ config(['$locationProvider' ,'$routeProvider',
         }).
         when('/bands/:bandId', {
         	template: '<band-detail></band-detail>'
+        }).
+        when('/venues', {
+          template: '<venue-list></venue-list>'
+        }).
+        when('/venues/:venueId', {
+          template: '<venue-detail></venue-detail>'
         }).
         otherwise('/concert-list');
     }

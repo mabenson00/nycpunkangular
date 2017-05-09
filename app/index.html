@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>NYC Punk Shows</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -23,10 +23,16 @@
   <script src="core/concert/concert.service.js"></script>
   <script src="core/bands/bands.module.js"></script>
   <script src="core/bands/bands.service.js"></script>
+  <script src="core/venue-list/venue-list.module.js"></script>
+  <script src="core/venue-list/venue-list.service.js"></script>
   <script src="core/band-detail/band-detail.module.js"></script>
   <script src="core/band-detail/band-detail.service.js"></script>
+  <script src="core/venue-detail/venue-detail.module.js"></script>
+  <script src="core/venue-detail/venue-detail.service.js"></script>
   <script src="concert-list/concert-list.js"></script>
+  <script src="venue-list/venue-list.js"></script>
   <script src="band-detail/band-detail.js"></script>
+  <script src="venue-detail/venue-detail.js"></script>
   <script src="bands/bands.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
@@ -36,6 +42,7 @@
   <ul class="menu">
     <li><a href="#!/concert-list">Concert List</a></li>
     <li><a href="#!/bands">bands</a></li>
+    <li><a href="#!/venues">Venues</a></li>
   </ul>
 
   <!--[if lt IE 7]>
@@ -44,7 +51,7 @@
 
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
