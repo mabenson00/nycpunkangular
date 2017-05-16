@@ -2,7 +2,7 @@ angular.
 	module('core.band-detail').
 		factory('BandDetail', ['$resource',
 			function($resource) { 
-				return $resource('http://localhost:3000/bands/:bandId.json', {}, {
+				return $resource('https://damp-gorge-42650.herokuapp.com/bands/:bandId.json', {}, {
 					query: {
 						method: 'GET',
 						params: {bandId: 'bands'},
