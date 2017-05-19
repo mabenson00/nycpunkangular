@@ -7,9 +7,9 @@
 <ul ng-repeat="(date, concerts) in $ctrl.concerts | filter:$ctrl.query | orderBy: 'date' | groupBy: 'date' " class="concerts">
 		{{ date }}
 	<li ng-repeat="concert in concerts ">
-	
+	   <a class="venue-link" href="#!/venues/{{concert.venue.id}}">{{concert.venue.name}}</a> |
 		<span ng-repeat="band in concert.bands" >
-		{{band.name}}{{$last ? '' : ($index == concert.bands.length -2) ? ' and ' : ','}} 
-		</span> | {{concert.venue.name}} | {{concert.time}}
+		<a href="#!/bands/{{band.id}}">{{band.name}}</a>{{$last ? '' : ($index == concert.bands.length -2) ? ', ' : ','}} 
+		</span> | {{concert.time}}
 	</li>
 </ul>
