@@ -1,4 +1,5 @@
-<h1 class="display-4"> {{$ctrl.band.name}} </h1>
+<h1 class="display-4"> {{$ctrl.band.name}} (<a ng-if="$ctrl.band.bandcamp" href="http://www.google.com/search?q={{$ctrl.band.name}}+bandcamp&btnI">Bandcamp</a>) </h1>
+ 
 <ul ng-repeat="(date, concerts) in $ctrl.band.concerts | orderBy: 'date' | groupBy: 'date' " class="concerts">
 	Date: {{ date }}
 	<li ng-repeat="concert in concerts">
