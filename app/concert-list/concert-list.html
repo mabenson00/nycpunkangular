@@ -8,7 +8,7 @@
 		{{ date }}
 	<li ng-repeat="concert in concerts ">
 	   <a class="venue-link" href="#!/venues/{{concert.venue.id}}">{{concert.venue.name}}</a> |
-		<span ng-repeat="band in concert.bands" >
+		<span ng-repeat="band in concert.bands | orderBy: 'id' " >
 		<a href="#!/bands/{{band.id}}">{{band.name}}</a>{{$last ? '' : ($index == concert.bands.length -2) ? ', ' : ','}} 
 		</span> | {{concert.time}}
 	</li>
