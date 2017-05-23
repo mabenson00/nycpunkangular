@@ -6,7 +6,6 @@ angular.module('myApp', [
   'core',
   'angular.filter',
   'ui.bootstrap',
-  'ui.bootstrap.popup',
   'ngAnimate',
   'ngSanitize',
   'myApp.concertList',
