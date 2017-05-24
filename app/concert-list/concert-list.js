@@ -9,7 +9,6 @@ angular.
     controller: ['Concert',
       function ConcertListController(Concert) {
         this.concerts = Concert.query();
-        console.log(this.concerts)
       }
     ]
   });
