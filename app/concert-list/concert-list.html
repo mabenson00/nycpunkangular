@@ -5,7 +5,7 @@
 </p>
 
 <ul ng-repeat="(date, concerts) in $ctrl.concerts | filter:$ctrl.query | orderBy: 'date' | groupBy: 'date' " class="concerts">
-		{{ date }}
+		{{ date }} | {{ date | date:'EEEE'}}
 	<li ng-repeat="concert in concerts ">
 	   <a class="venue-link" href="#!/venues/{{concert.venue.id}}">{{concert.venue.name}}</a> |
 		<span ng-repeat="band in concert.bands | orderBy: 'id' " >
