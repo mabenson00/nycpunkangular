@@ -14,7 +14,8 @@ angular.module('myApp', [
   'myApp.bandDetail',
   'myApp.venueList',
   'myApp.venueDetail',
-  'myApp.controllers'
+  'myApp.controllers',
+  'chart.js'
 
 ]).
 // config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
@@ -41,8 +42,8 @@ config(['$locationProvider' ,'$routeProvider',
         when('/venues', {
           template: '<venue-list></venue-list>'
         }).
-        when('/venues/:venueId', {
-          template: '<venue-detail></venue-detail>'
+        when('/venues/venue-graph', {
+          template: '<venue-list></venue-list>'
         }).
         otherwise('/concert-list');
     }

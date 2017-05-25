@@ -1,6 +1,15 @@
 <h1 class="display-4"> All Venues </h1>
+
 <ul>
 	<li ng-repeat="venue in $ctrl.venues | orderBy: 'name' ">
 	<a href ="#!/venues/{{venue.id}}">{{venue.name}} </a>
 	</li>
+	
 </ul>
+
+	<div class="widget" ng-controller="DoughnutCtrl">
+
+		<canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+		</canvas> 
+	</div>
+
